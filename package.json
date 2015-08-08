@@ -1,0 +1,15 @@
+{
+  "name": "infinity_levels_challenge",
+  "version": "0.1.0",
+  "description": "Development challenge from Infinity Levels",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "InfinityLevelsChallenge"
+  },
+  "author": "Maxime LEPERS-TASSY",
+  "license": "ISC"
+}
