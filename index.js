@@ -19,11 +19,20 @@ processorData = {
 var processorEvent = new EventEmitter();
 
 
+var init = function(logPath){
+	processor.processFile(processorEvent, processorData, logPath);
+	
+	processorEvent.on('DoneProcess', function(message){
+		stats.reportStats(processorData);	
+	});	
+	
+	return true;
+}
+
 /*********** processing ***************/
 
-processor.processFile(processorEvent, processorData);
+init();
 
-processorEvent.on('DoneProcess', function(message){
-	stats.reportStats(processorData);	
-});
 
+//for tests
+exports.init = init;
